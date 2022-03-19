@@ -21,7 +21,7 @@
    + 구글 smtp를 이용하여 회원가입 시 이메일 인증 기능 구현을 통한 회원가입 
  
 4. 서버환경
-   + vmware + Ubuntu(LINUX의 버전) / AWS EC2(가상서버,Tomcat이 들어가있어서 따로 웹서버 필요없음) + Ubuntu(LINUX의 버전)
+   + vmware + Ubuntu(LINUX의 버전) / AWS EC2(가상서버) + Ubuntu(LINUX의 버전)
    + docker를 이용한 클라이언트,서버,데이터베이스 관리
    + nginx 웹서버를 이용하여 다른 사람들이 내 pc에 있는 웹브라우저에 접속을 가능하게함
 
