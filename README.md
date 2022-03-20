@@ -10,7 +10,7 @@
    + 개발자 : 조성진
    + 개발기간 : 2022-03-19 ~ ing
    + 사용언어 : JAVA 11(백) / js,html,css,부트스트랩(프론트)
-   + 개발환경 : SpringBoot 2.6.4 / jpa / H2 database(경량db,관계형데이터베이스RDBMS)
+   + 개발환경 : SpringBoot 2.6.4 / jpa / Mysql(관계형데이터베이스RDBMS)
 
 3. 구현기능
    + 스프링 시큐리티를 이용한 JWT토큰방식의 로그인,회원가입 및 소셜로그인(카카오톡,구글)
