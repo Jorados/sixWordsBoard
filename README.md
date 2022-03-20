@@ -27,4 +27,4 @@
 
 5. 개발방향
    + 게시판과 기능들을 먼저 구현하고 서버환경을 설정하는 방향으로 진행하겠습니다.
-   + 엔티티설계(domain) -> repository설계 -> service설계 -> webController설계 -> 프론트설계 -> 이후 추가 기능들 설계 -> api설계
+   + 엔티티개발(domain) -> repository개발 -> service개발 -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> rest api개발
