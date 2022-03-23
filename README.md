@@ -29,4 +29,4 @@
    + 게시판과 기능들을 먼저 구현하고 서버환경을 설정하는 방향으로 진행하겠습니다.
    + 엔티티개발(domain) -> repository개발 -> service개발 -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> rest api개발
 
-* [1주차](https://github.com/Jorados/Myproject/blob/main/Progress/1%EC%A3%BC%EC%B0%A8.md)
+* [1주차](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
