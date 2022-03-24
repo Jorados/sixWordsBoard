@@ -26,7 +26,7 @@
 
 5. 개발방향
    + 게시판과 기능들을 먼저 구현하고 서버환경을 설정하는 방향으로 진행하겠습니다.
-   + 엔티티개발(domain) -> repository개발 -> service개발 -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> 배포
+   + 엔티티개발(domain) -> repository개발(기능) -> service개발(기능구현) -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> 배포
 
 ----------
 * [1주차](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
