@@ -2,7 +2,7 @@
 ---
 
 1. 프로젝트
-    + 스프링부트와 jpa를 활용한 게시판(헤밍웨이가 6단어만으로 쓴 소설처럼 6단어로만 쓸 수 있는 게시판)
+    + 스프링부트와 jpa를 활용한 웹 애플리케이션 게시판(헤밍웨이가 6단어만으로 쓴 소설처럼 6단어로만 쓸 수 있는 게시판)
     + [참고 사이트](http://www.sixwordswriter.cf/)
 
 2. 개요
@@ -26,7 +26,7 @@
 
 5. 개발방향
    + 게시판과 기능들을 먼저 구현하고 서버환경을 설정하는 방향으로 진행하겠습니다.
-   + 엔티티개발(domain) -> repository개발 -> service개발 -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> rest api개발 -> 배포
+   + 엔티티개발(domain) -> repository개발 -> service개발 -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> 배포
 
 ----------
 * [1주차](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
