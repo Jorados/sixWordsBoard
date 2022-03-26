@@ -31,10 +31,11 @@ public class MemberService {
         return memberJpaRepository.findById(id); // 없으면 널 반환
     }
 
+
     private void UniqueLoginId(String id) {
         Member findMember = memberJpaRepository.findByLoginId(id);
 
-        if (findMember !=null){
+        if (findMember !=null){   //이미 가입 Member가 있으면 예외터지게.
             throw new DuplicatedIdEx("이미 존재하는 id 입니다");
         }
     }

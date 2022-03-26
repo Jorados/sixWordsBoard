@@ -33,7 +33,7 @@ public class MemberJpaRepository {
 
         Member findMember;
         try{
-            findMember = em.createQuery("select m from Member m where m.loginId", Member.class) //JPQL 쿼리 /공부하자
+            findMember = em.createQuery("select m from Member m where m.loginId = :loginId", Member.class) //JPQL 쿼리 /공부하자
                     .setParameter("loginId",loginId)
                     .getSingleResult();
         }catch (NoResultException e){
