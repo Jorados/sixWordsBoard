@@ -24,7 +24,7 @@ public class MemberJpaRepository {
     }
 
     //id로 회원 찾기
-    public Member findById(String id){
+    public Member findById(Long id){
         return em.find(Member.class, id);
     }
 

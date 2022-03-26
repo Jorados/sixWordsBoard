@@ -50,14 +50,66 @@ public class BoardJpaRepository {
     }
 
     //키워드로 글 조회
+    public List<Board> findByKeyword(String keyword){
+        return em.createQuery("select b form Board b where b.content like '%" + keyword + "%'", Board.class)
+                .getResultList();
+    }
+
     //좋아요 높은 순으로 조회
+    public List<Board> findByLikesCnt(int startIndex,int pageSize){
+        return em.createQuery("select b from Board b order by b.likeCount desc", Board.class)
+                .setFirstResult(startIndex)
+                .setMaxResults(pageSize)
+                .getResultList();
+    }
+
     //최신 순으로 조회
+    public List<Board> findByLatestDate(int startIndex,int pageSize){
+        return em.createQuery("select b from Board b order by b.writeDate desc",Board.class)
+                .setFirstResult(startIndex)
+                .setMaxResults(pageSize)
+                .getResultList();
+    }
+
     //글 삭제
+    public void delete(Long id){
+        Board findBoard = em.find(Board.class, id);
+        em.remove(findBoard);
+    }
+
     //내가 좋아요 누른 글 조회
+    public List<Board> findLikesBoard (Long memberId){
+        return em.createQuery("select 1.board from Likes 1 where 1.member.id = : memberId", Board.class)
+                .setParameter("memberId",memberId)
+                .getResultList();
+    }
+
     //페이징 전용 메소드
+    public List<Board> findListPaging(int startIndex,int pageSize){
+        return em.createQuery("select b from Board b",Board.class)
+                .setFirstResult(startIndex)
+                .setMaxResults(pageSize)
+                .getResultList();
+    }
+
     //전체 글 수
-    //작성자 이름으로 조회딘 글 수
+    public int findAllCnt(){
+        return ((Number) em.createQuery("select count(b) from Board b")
+                .getSingleResult()).intValue();
+    }
+
+    //작성자 이름으로 조회된 글 수
+    public int findNameCnt(String name){
+        return ((Number) em.createQuery("select count(b) from Board b where b.member.name = :name")
+                .setParameter("name",name)
+                .getSingleResult()).intValue();
+    }
+
     //키워드로 조회된 글 수
+    public int findByKeywordCnt(String keyword){
+        return ((Number) em.createQuery("select count(b) from Board b where b.content like '%" + keyword + "%'")
+                .getSingleResult()).intValue();
+    }
 
 
 }
