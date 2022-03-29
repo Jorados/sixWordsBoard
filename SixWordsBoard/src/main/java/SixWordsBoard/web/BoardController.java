@@ -98,8 +98,77 @@ public class BoardController {
 
 
     }
+
     @GetMapping("/board/edit")
+    public String createEditForm(@RequestParam("boardId") Long boardId,
+                                 @SessionAttribute(name = " loginMember",required = false) Member loginMember, Model model){
+
+        Board findBoard = boardService.findByBoardId(boardId);
+
+        if(!isLoginMemberhteWriter(loginMember.getId(), findBoard.getMember().getId())) {
+            //가져온 id가 게시판 작성 id 작성자가 아니면
+            throw new NoAuthorizationEx("수정 권한이 없습니다."); //처리
+        }
+
+        model.addAttribute("board",findBoard);
+        model.addAttribute("memberId",loginMember.getId());
+
+        return "board/edit";
+    }
+
+    private boolean isLoginMemberhteWriter(Long loginMemberId, Long writerId) {
+        return loginMemberId.equals(writerId); //loginMemberId랑 writerId랑 같은지
+    }
+
     @PostMapping("/board/edit")
+    public String edit(@Validated @ModelAttribute("board") BoardDto dto, BindingResult bindingResult,
+                       @RequestParam("boardId") Long boardId,
+                       RedirectAttributes redirectAttributes){
+        log.info("binding error = " + bindingResult);
+        log.info("dto = " + dto);
+
+        if(bindingResult.hasErrors()){    //BindingResult //에러있으면 원래창으로
+            log.info("binding error = " + bindingResult);
+            return "board/edit" ;
+        }
+
+        Board findBoard = boardService.findByBoardId(boardId);
+
+        findBoard.setContent(dto.getContent());  //set
+        boardService.save(findBoard);  //저장
+
+        redirectAttributes.addAttribute("boardId",findBoard.getId());   //중복 요청 방지
+        return "redirect:/board"; //고쳐서 원래 보드
+    }
+
+
+
+
     @GetMapping("/board/delete")
+    public String createDeleteForm(@RequestParam("boardId") Long boardId ,Model model){
+        model.addAttribute("boardId", boardId);
+        return "board/delete";
+    }
+
     @PostMapping("/board/delete")
+    public String delete(@RequestParam("boardId")Long boardId,
+                         //핸들러 메소드 // Session은 여러 화면이나 여러 요청에서 사용해야 하는 객체를 공유할 때 사용할 수 있다,
+                         @SessionAttribute(name = "loginMember")Member loginMember){
+
+        log.info("boarId" + boardId);
+        log.info("삭제하려는 멤버 아이디" + loginMember.getId());
+
+        Board findBoard = boardService.findByBoardId(boardId);
+
+        if(!loginMember.getId().equals(findBoard.getMember().getId()) ){
+            throw new NoAuthorizationEx("삭제 권한이 없음 ");
+        }
+
+        boardService.delete(boardId);
+
+       return "redirect:/";  //삭제하고나면 홈으로
+    }
+
+    
+
 }
