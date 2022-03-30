@@ -32,4 +32,4 @@
 * [환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
 * [레포지토리 및 서비스개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
 * [엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
-* [웹 컨트롤러 개발]()
+* [웹 컨트롤러 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
