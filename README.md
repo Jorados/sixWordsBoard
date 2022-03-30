@@ -29,4 +29,5 @@
    + 엔티티개발(domain) -> repository개발(기능) -> service개발(기능구현) -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> 배포
 
 ----------
-* [1주차](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
+* [환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
+* []
