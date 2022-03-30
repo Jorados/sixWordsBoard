@@ -30,4 +30,4 @@
 
 ----------
 * [환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
-* []
+* [레포지토리 및 서비스개발]
