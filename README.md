@@ -29,8 +29,12 @@
    + 엔티티개발(domain) -> repository개발(기능) -> service개발(기능구현) -> webController개발 -> 프론트개발 -> 이후 추가 기능들 개발 -> 배포
 
 ----------
+### 부분 개발 정리
 * [환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
 * [레포지토리 및 서비스개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
 * [엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
 * [웹 컨트롤러 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
-* [웹 페이지(프론트) 개발]()
+* [웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
+
+---------
+### 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
