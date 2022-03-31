@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <div class="footer" th:fragment="footer">
-    <p>&copy; 2022-03-31 조성진</p>
+    <footer class = "mt-4 my-5">
+        --------------------------------------------------------------------------------------------------------------------
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li clas="nav-item"><a href="/" calss="nav-link px02 text-muted">Home</a> </li>
+            <li clas="nav-item"><a th:href="@{/member/new}" href="#" calss="nav-link px02 text-muted">회원가입</a> </li>
+            <li clas="nav-item"><a th:href="@{/member/login}" href="#" calss="nav-link px02 text-muted">로그인</a> </li>
+        </ul>
+        <p class="text-center text-muted">&copy; 조성진 게시판</p>
+    </footer>
 </div>
