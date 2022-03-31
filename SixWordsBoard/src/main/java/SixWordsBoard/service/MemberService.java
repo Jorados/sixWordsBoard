@@ -22,7 +22,6 @@ public class MemberService {
     public Long join(Member member){
         UniqueLoginId(member.getLoginId());
         memberJpaRepository.save(member);
-
         return member.getId();
     }
 

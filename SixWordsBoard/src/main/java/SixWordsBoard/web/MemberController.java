@@ -58,25 +58,25 @@ public class MemberController {
         //만약에 에러뜨면 로그에띄우고 다시 회원가입창
         if(bindingResult.hasErrors()){
             log.info("binding Error = " + bindingResult);
-            return "/member/new";
+            return "member/new";
         }
 
         Member member = new Member();
         member.setLoginId(dto.getLoginId()); //PostMapping에 의한 Dto로 데이터 전송받은걸 set함
-        member.setName(dto.getName());
         member.setPassword(dto.getPassword());
+        member.setName(dto.getName());
         member.setRole(Role.ADMIN);
 
         memberService.join(member);      //맴버서비스 회원가입
 
-        //로그인 처리
-        HttpSession session = request.getSession(true); //세션받아옴
-        session.setAttribute(SessionConst.LOGIN_MEMBER,member);
+        // 로그인 처리
+        HttpSession session = request.getSession(true);
+        session.setAttribute(SessionConst.LOGIN_MEMBER, member);
 
         redirectAttributes.addAttribute("memberName", member.getName());
-        model.addAttribute("member",member);
+        model.addAttribute("member", member);
 
-        return "redirect:/member/afternew/{memberName}"; //회원가입 환영페이지
+        return "redirect:/member/afternew/{memberName}";
     }
 
     @GetMapping("/member/afternew/{membernew}")
