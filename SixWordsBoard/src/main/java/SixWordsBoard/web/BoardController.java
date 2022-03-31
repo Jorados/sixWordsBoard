@@ -169,6 +169,6 @@ public class BoardController {
        return "redirect:/";  //삭제하고나면 홈으로
     }
 
-    
+
 
 }
