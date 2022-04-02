@@ -79,7 +79,7 @@ public class MemberController {
         return "redirect:/member/afternew/{memberName}";
     }
 
-    @GetMapping("/member/afternew/{membernew}")
+    @GetMapping("/member/afternew/{memberName}")
     public String afterJoin(@PathVariable("memberName") String memberName, Model model){
         model.addAttribute("memberName",memberName);
         return "member/afternew";
