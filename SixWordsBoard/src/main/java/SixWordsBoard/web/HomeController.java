@@ -25,7 +25,7 @@ public class HomeController {
     private final LikesService likesService;
 
     @GetMapping("/")
-    public String home(@SessionAttribute(name = "loginMember", required = false) Member loginMember,
+    public String Home(@SessionAttribute(name = "loginMember", required = false) Member loginMember,
                        Model model,
                        @RequestParam(defaultValue = "1")int page){
 
@@ -42,7 +42,7 @@ public class HomeController {
         model.addAttribute("pagination", pagination);
 
         if(loginMember == null){
-            return "home";
+            return "Home";
         }
 
         Map<Long,Integer> myLikeBoardId = likesService.getLikeBoardId(loginMember.getId(),orderedByL);

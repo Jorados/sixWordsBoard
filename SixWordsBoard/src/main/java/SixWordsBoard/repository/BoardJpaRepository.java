@@ -79,7 +79,7 @@ public class BoardJpaRepository {
 
     //내가 좋아요 누른 글 조회
     public List<Board> findLikesBoard (Long memberId){
-        return em.createQuery("select 1.board from Likes 1 where 1.member.id = : memberId", Board.class)
+        return em.createQuery("select l.board from Likes l where l.member.id = :memberId", Board.class)
                 .setParameter("memberId",memberId)
                 .getResultList();
     }

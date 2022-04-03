@@ -10,11 +10,11 @@
 </header>
 <!--점보토론-->
 <div class="p-5 bg-rihgt rounded-3">
-    <div class="container-fluid py-5 px-5">
+    <div>
         <h1 class ="display-5 fw-bold">무엇을 쓰든 상관없다!</h1>
         <h1 class="display-5 fw-bold">6단어를 활용한 게시판 소설</h1>
         <p class ="col-md-8 fs-5">"For sale : Baby shoes. Never worn." 헤밍웨이가 6단어로만 쓴 소설. <br> 당신도 헤밍웨이처럼 멋진 6단어를 써봐!</p>
-        <button class="btn btn-primary btn-lg" th:onclick="'location.href=' + '\'' + @{/member/login} + '\''" type="button">글 쓰러 가기</button>
+        <button th:onclick="'location.href=' + '\'' + @{/member/login} + '\''" type="button">글 쓰러 가기</button>
     </div>
 </div>
 <br>
@@ -25,7 +25,7 @@
           <button class = "nav-link fw-bold active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">좋아요 높은 순</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">최신순</button>
+            <button  id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">최신순</button>
         </li>
     </ui>
     <!-- 탭 내용-->

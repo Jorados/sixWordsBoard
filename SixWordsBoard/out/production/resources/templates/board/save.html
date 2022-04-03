@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>6단어 글 작성</title>
+</head>
+<body>
+<header th:replace="fragments/login_body_header :: login_body_header">
+    <a href="#" th:href="@{/}" >
+        <span class="home fs-4">6단어 소설가</span>
+    </a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" th:href="@{/member/logout}" class="nav-link">로그아웃</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/board/new}" class="nav-link">글쓰기</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/member/{id} (id=${memberId})}" class="nav-link">마이페이지</a></li>
+    </ul>
+</header>
+    <div>
+        <form th:action th:method="post" th:object = "${board}">
+            <textarea th:field="*{content}" th:errorclass="field-error" class="form-control" id="exampleFormControlTextarea1" rows=14></textarea>
+            <div class="field-error text-center" th:errors="*{content}">작성 오류</div>
+            <div class="container">
+                  <div calss="row">
+                    <div calss="col-xs-12">
+                        <div class="text-center m-5">
+                            <button class="btn btn-primary" type="submit">등록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+<div th:replace="fragments/login_footer :: login_footer"></div>
+</body>
+</html>

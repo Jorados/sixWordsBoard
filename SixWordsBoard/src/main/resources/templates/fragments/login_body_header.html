@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<header th:fragment="login_body_header">
+    <a href="#" th:href="@{/}" >
+        <span class="home fs-4">6단어 소설가</span>
+    </a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" th:href="@{/member/logout}" class="nav-link">로그아웃</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/board/new}" class="nav-link">글쓰기</a></li>
+    </ul>
+</header>

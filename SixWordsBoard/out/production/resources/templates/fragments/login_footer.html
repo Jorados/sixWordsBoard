@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<div class="login_footer" th:fragment="login_footer">
+    <footer>
+        --------------------------------------------------------------------------------------------------------------------
+        <ul>
+            <li><a href="/">Home</a> </li>
+            <li><a th:href="@{/member/logout}" href="#" >로그아웃</a> </li>
+            <li><a th:href="@{/board/new}" href="#" >글쓰기</a> </li>
+            <li><a href="#" th:href="@{/member/{id} (id=${memberId})}">마이페이지</a></li>
+        </ul>
+        <p>&copy; 조성진 게시판</p>
+    </footer>
+</div>
