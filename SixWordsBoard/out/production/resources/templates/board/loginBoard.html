@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>6단어 소설가</title>
+</head>
+<body>
+
+
+<header th:replace="fragments/login_body_header :: login_body_header">
+    <a href="#" th:href="@{/}" >
+        <span class="home fs-4">6단어 소설가</span>
+    </a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" th:href="@{/member/logout}" class="nav-link">로그아웃</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/board/new}" class="nav-link">글쓰기</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/member/{id} (id=${memberId})}" class="nav-link">마이페이지</a></li>
+    </ul>
+</header>
+
+<!--게시글 -->
+<div class="container">
+    <div th:object="${board}">
+        <h2 th:text="*{content}" >Short title, long jacket</h2>
+        <ul>
+            <li>
+                <small th:text="*{member.name}">작성자</small>
+            </li>
+            <div>
+                <li th:with="key=${board.id}">
+                    <i th:id="'iconOrderedByD_' + ${board.id}"
+                       th:class="${myLikeBoardId.get(key) == 1} ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"
+                       th:name="${board.id}"
+                       th:text="${board.likeCount}"
+                       style="color: red;">10</i>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+
+
+
+    <!--삭제,수정 버튼 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div  class="text-center">
+                    <button th:onclick="'location.href=' + '\'' + @{/board/delete(boardId=${board.id})} + '\''" type="button">삭제</button>
+                    <button th:onclick="'location.href=' + '\'' + @{/board/edit(boardId=${board.id})} + '\''"  type="button">수정</button>
+                </div>
+            </div>
+        </div>
+        <div th:replace="fragments/login_footer :: login_footer"></div>
+    </div>
+
+
+</div>
+</body>
+</html>

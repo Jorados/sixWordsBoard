@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>6단어 소설가</title>
+</head>
+<body>
+
+   <form th:action th:method="post">
+       <h1>정말 삭제할건가요?<h1>
+       <input type="hidden" name="boardId" th:value="${boardId}">
+           <button type="submit" >예</button>
+           <button type="button" th:onclick="'location.href=' + '\'' + @{/} + '\''">아니오</button>
+</body>
+</html>

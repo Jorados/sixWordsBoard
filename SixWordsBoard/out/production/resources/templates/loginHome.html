@@ -19,15 +19,17 @@
 <!--점보토론-->
 <div class="p-5 bg-light rounded-3">
     <div class="container-fluid py-5 px-5">
-        <h1 class="display-5 fw-bold">무엇을 쓰든 상관 없다냐옹</h1>
-        <h1 class="display-5 fw-bold">단, 6단어로만!</h1>
-        <p class="col-md-8 fs-5">"For sale : Baby shoes. Never worn." 헤밍웨이가 6단어만으로 쓴 소설이라냥. <br> 당신도 헤밍웨이처럼 멋진 6단어 소설을 쓸 수 있다냥!</p>
+        <h1 class="display-5 fw-bold">무엇을 쓰든 상관없다!</h1>
+        <h1 class="display-5 fw-bold">6단어를 활용한 게시판 소설</h1>
+        <p class="col-md-8 fs-5">"For sale : Baby shoes. Never worn." 헤밍웨이가 6단어로만 쓴 소설.<br> 당신도 헤밍웨이처럼 멋진 6단어를 써봐!</p>
         <button th:onclick="'location.href=' + '\'' + @{/board/new} + '\''" class="btn btn-primary btn-lg" type="button">글 쓰러 가기</button>
     </div>
 </div>
 </div>
 <br>
 <br>
+
+<!--좋아요 높은순/최신순 -->
 <div class="container">
     <ui class="nav nav-tabs mt-5 mb-4" id = "myTab" role="tablist">
         <li class ="nav-item" role="presentation">
@@ -37,10 +39,36 @@
             <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">최신순</button>
         </li>
     </ui>
-    <!-- 탭 내용-->
-    <div class ="tab-content" id="myTabContent">
 
+
+    <!-- 탭 내용--> <!--좋아요순-->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <!-- 좋아요순 -->
+            <div class="row row-cols1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col" th:each="orderedBoard : ${orderedByL}">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;">
+                                <h2 class="content mt-5 mb-5 display-6 fw-bold" th:text="${orderedBoard.content}" >For sale: tow shose, never used.</h2>
+                            </a>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="me-auto">
+                                    <small th:text="${orderedBoard.member.name}">By. Unknown</small>
+                                </li>
+                                <div>
+                                    <li class="d-flex align-items-center mx-2">
+                                        <i class="fa-regular fa-heart" th:name="${orderedBoard.id}"
+                                           th:text="${orderedBoard.likeCount}" style="color: red;">10</i>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div th:replace="fragments/login_footer :: login_footer" />
 </div>
 
