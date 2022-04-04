@@ -46,7 +46,7 @@ JPA 공부
 * [값 타입]()
 * [객체지향 쿼리 문법]()
   
-spring MVC
+SPRING MVC
 * [서블릿]()
 * [서블릿,JSP,MVC 패턴]()
 * [MVC프레임워크 스프링 MVC-구조이해]()
@@ -64,5 +64,5 @@ spring MVC
 * [스프링 타입 컨버터]()
 * [파일업로드]()
 
-spring security
+SPRING SECURITY
 * [이론]()
