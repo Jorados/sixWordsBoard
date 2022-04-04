@@ -42,8 +42,16 @@
           *  EntityTransaction ts = em.getTransaction(); //불러오고
           *  transaction.begin(): //트랜잭션 시작
           *  여기서 em.pesist(~)로 영속을해도 INSERT SQL을 DB에 보내지않는다!!!!!!!
-          *  transaction.commit();을 하는순간 DB에 persist된 객체가 커밋된다.
-          *    
+          *  transaction.commit();을 하는순간 쓰기지연 SQL저장소에 있는 정보가 DB에 날아가서 커밋된다.
+ ![image](https://user-images.githubusercontent.com/100845256/161475810-5b01f223-bc85-4b85-8701-61634a1a540d.png)  
+   *  변경감지(엔티티수정 / Dirty Checking)
+      *  entity조회(em.find(Member.class,"member1");)하고
+      *   memberA.setUsername("hi") / memberA.setAge(10); 영속되어있는 엔티티 데이터 수정하고
+      *   em.utdate(member) //이런 코드가 필요할 것 같지만
+      *   1차캐시 엔티티정보를 JPA 영속 컨텍스트에서 스냅샷으로 기록 후 기존 꺼랑 비교 후 쓰기지연 SQL저장소에 자동으로 update SQL을 생성 -> flush/commit 
+   *  지연로딩
+      *   JPQL로(Member findMember = em.createQuery("select m from Member m",Member.class).getSingleResult();) DB의 Member객체를 조회(Member 엔티티와 Team 엔티티는 N:1 매핑)한다고 가정해보자
+      *   즉시로딩(@ManyToOne(fecth=FetchType.EAGER)를 사용하면 Member/Team을 조회하는 쿼리가 로그에 둘다 날아가는데 만약에 연관된 Team이 100개,1000개 이상이라면? 어지럽다. 그렇기 때문에 지연로딩@ManyToOne(fecth=FetchType.LAZY)을 사용하여 연관된 데이터만 불러오는 것이 좋다.
 
       
 
