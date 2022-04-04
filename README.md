@@ -1,4 +1,4 @@
-### sixWordBoard
+### :clipboard: sixWordBoard
 ---
 
 1. 프로젝트
@@ -9,7 +9,7 @@
    + 명칭 : sixWordBoard
    + 개발자 : 조성진
    + 개발기간 : 2022-03-19 ~ ing
-   + 사용언어 : JAVA 11(백) / js,html(thymeleaf),css,부트스트랩(프론트)
+   + 사용언어 : JAVA 11(백) / html(thymeleaf),부트스트랩(프론트)
    + 개발환경 : SpringBoot 2.6.4 / jpa / Mysql(관계형데이터베이스RDBMS)
 
 3. 구현기능
@@ -29,7 +29,7 @@
    + 엔티티개발(domain) -> repository개발(기능) -> service개발(기능구현) -> webController개발 -> 프론트개발 -> 기본 게시판 개발 -> 추가 기능 개발 -> 배포
 
 ----------
-### 부분 개발 정리
+### ⭐ 부분 개발 정리
 * [1주차~2주차 / 환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
 * [3주차 / 레포지토리 및 서비스개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
 * [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
@@ -37,18 +37,31 @@
 * [7주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 
 ---------
-### 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
+### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
 JPA 공부
-* [JPA 영속성 컨텍스트]()
-* [엔티티 매핑]()
+* [JPA 영속성 컨텍스트](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/Persist.md)
+* [엔티티 매핑](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/EntityMapping.md)
 * [연관관계 매핑 기초 / 다양한 연관관계 매핑]()
 * [프록시와 연관관계 관리]()
 * [값 타입]()
 * [객체지향 쿼리 문법]()
   
-spring MVC
-* [MVC의 구조와 기능 웹페이지 처리]()
+SPRING MVC
+* [서블릿]()
+* [서블릿,JSP,MVC 패턴]()
+* [MVC프레임워크 스프링 MVC-구조이해]()
+* [스프링 MVC-기본기능]()
+* [간단한 페이지 처리]()
+* [타임리프-기본기능]()
+* [타임리프-스프링 통합과 폼]()
+* [메시지,국제화]()
+* [검증 validation]()
+* [로그인처리1-쿠키,세션]()
+* [로그인 처리2-필터,인터셉터]()
+* [예외처리와 오류페이지]()
+* [API 예외 처리]()
+* [스프링 타입 컨버터]()
+* [파일업로드]()
 
-spring security
+SPRING SECURITY
 * [이론]()
-* [세션방식 / 토큰방식]()
