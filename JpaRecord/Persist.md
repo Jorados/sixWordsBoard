@@ -29,7 +29,7 @@
       *  //em을 통해서 객체를 컨텍스트에 저장
       *  em.persist(member);
    *  준영속(엔티티를 영속성 컨텍스트에서 분리),삭제(객체를 삭제)
-      *  em.detach(member); //준영속(분리된) 상태
+      *  em.detach(member); //준영속(분리된) 상태 , em.clear() , em.close()
       *  em.remove(member); //삭제된 상태
 
 #### :star:영속성 컨텍스트의 이점
@@ -52,6 +52,13 @@
    *  지연로딩
       *   JPQL로(Member findMember = em.createQuery("select m from Member m",Member.class).getSingleResult();) DB의 Member객체를 조회(Member 엔티티와 Team 엔티티는 N:1 매핑)한다고 가정해보자
       *   즉시로딩(@ManyToOne(fecth=FetchType.EAGER)를 사용하면 Member/Team을 조회하는 쿼리가 로그에 둘다 날아가는데 만약에 연관된 Team이 100개,1000개 이상이라면? 어지럽다. 그렇기 때문에 지연로딩@ManyToOne(fecth=FetchType.LAZY)을 사용하여 연관된 데이터만 불러오는 것이 좋다.
+
+
+#### :star:플러시 flush()
+   *  플러시:영속성 컨텍스트의 변경내용을 데이터베이스에 반영(새로고침이라고 생각하자)
+   *  플러시 발생:변경감지,수정된엔티티 쓰기 지연SQL저장소에 등록,쓰기지연SQL저장소의쿼리를 DB에전송
+   *  플러시 하는법:em.flush()-직접호출 / 트랜잭션 커밋-플러시자동호출 / JPQL-플러시자동호출
+   *  플러시는!:영속성 컨텍스트를 비우는 개념이 아님,영속성 컨텍스트의 변경내용을 DB에 동기화,커밋직전에만 동기화 하면됨.
 
       
 
