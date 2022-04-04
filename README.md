@@ -40,7 +40,7 @@
 ### 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
 JPA 공부
 * [JPA 영속성 컨텍스트](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/Persist.md)
-* [엔티티 매핑]()
+* [엔티티 매핑](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/EntityMapping.md)
 * [연관관계 매핑 기초 / 다양한 연관관계 매핑]()
 * [프록시와 연관관계 관리]()
 * [값 타입]()
