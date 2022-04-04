@@ -2,6 +2,8 @@
 -----------------------
 #### :star:jpa에서 가장 중요한 2가지
   * (JPA는 JAVA 애플리케이션과 JDBC사이에서 동작한다.)
+  ![image](https://user-images.githubusercontent.com/100845256/161479804-9387aeaa-3d43-4c2b-a525-a9cef2027b2c.png)
+
   * 객체와 관계형 데이터베이스 매핑하기
   * 영속성 컨텍스트
   
