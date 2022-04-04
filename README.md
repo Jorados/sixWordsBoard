@@ -66,4 +66,3 @@ spring MVC
 
 spring security
 * [이론]()
-* [세션방식 / 토큰방식]()
