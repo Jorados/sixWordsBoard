@@ -5,9 +5,38 @@
     <title>6단어 소설가</title>
 </head>
 <body>
+<header th:replace="fragments/login_body_header :: login_body_header">
+    <a href="#" th:href="@{/}" >
+        <span class="home fs-4">6단어 소설가</span>
+    </a>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" th:href="@{/member/logout}" class="nav-link">로그아웃</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/board/new}" class="nav-link">글쓰기</a></li>
+        <li class="nav-item"><a href="#" th:href="@{/member/{id} (id=${memberId})}" class="nav-link">마이페이지</a></li>
+    </ul>
+</header>
 
-<form th:action th:method="post">
-    아직안됨!@
-</form>
+<div class="container">
+    <form th:action th:method="post" th:object="${board}" class="mt-5">
+        <div class="mx-auto">
+            <textarea th:field="*{content}" th:errorclass="field-error" class="form-control"  id="exampleFormControlTextarea1" rows=14></textarea>
+            <div class="field-error text-center" th:errors="*{content}">작성 오류</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div  class="text-center m-5">
+                        <button class="btn btn-primary" type="submit">수정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div th:replace="fragments/login_footer :: login_footer"></div>
+    </div>
+
 </body>
 </html>

@@ -48,7 +48,7 @@
                 <div class="col" th:each="orderedBoard : ${orderedByL}">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;">
+                            <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;"> <!--클릭하면 이동 -->
                                 <h2 class="content mt-5 mb-5 display-6 fw-bold" th:text="${orderedBoard.content}" >For sale: tow shose, never used.</h2>
                             </a>
                             <ul class="d-flex list-unstyled mt-auto">

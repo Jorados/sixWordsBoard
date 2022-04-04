@@ -101,13 +101,12 @@ public class BoardController {
 
     @GetMapping("/board/edit")
     public String createEditForm(@RequestParam("boardId") Long boardId,
-                                 @SessionAttribute(name = " loginMember",required = false) Member loginMember, Model model){
+                                 @SessionAttribute(name = "loginMember",required = false) Member loginMember, Model model){
 
         Board findBoard = boardService.findByBoardId(boardId);
 
-        if(!isLoginMemberhteWriter(loginMember.getId(), findBoard.getMember().getId())) {
-            //가져온 id가 게시판 작성 id 작성자가 아니면
-            throw new NoAuthorizationEx("수정 권한이 없습니다."); //처리
+        if(!isLoginMemberhteWriter(loginMember.getId(), findBoard.getMember().getId())){
+            throw new NoAuthorizationEx("수정 권한이 없습니다.");
         }
 
         model.addAttribute("board",findBoard);
@@ -117,8 +116,10 @@ public class BoardController {
     }
 
     private boolean isLoginMemberhteWriter(Long loginMemberId, Long writerId) {
-        return loginMemberId.equals(writerId); //loginMemberId랑 writerId랑 같은지
+
+        return loginMemberId.equals(writerId);
     }
+
 
     @PostMapping("/board/edit")
     public String edit(@Validated @ModelAttribute("board") BoardDto dto, BindingResult bindingResult,
@@ -134,7 +135,7 @@ public class BoardController {
 
         Board findBoard = boardService.findByBoardId(boardId);
 
-        findBoard.setContent(dto.getContent());  //set
+        findBoard.setContent(dto.getContent());  //게시글 set
         boardService.save(findBoard);  //저장
 
         redirectAttributes.addAttribute("boardId",findBoard.getId());   //중복 요청 방지
