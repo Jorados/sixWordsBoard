@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Title</title>
 </head>
+<body>
 <header th:replace="fragments/login_body_header :: login_body_header">
     <a href="#" th:href="@{/}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <span class="home fs-4">6단어 소설가</span>
@@ -15,7 +16,42 @@
         <li class="nav-item"><a href="#" th:href="@{/member/{id} (id=${memberId})}" class="nav-link">마이페이지</a></li>
     </ul>
 </header>
-<body>
-안녕마이페이지야
+<!--탭 부분-->
+<ul>
+    <li>
+        <button id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">내가 쓴 글</button>
+    </li>
+</ul>
+
+<!--내가 쓴 글-->
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <!-- 좋아요순 -->
+        <div class="row row-cols1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col" th:each="writeBoard : ${writeBoards}">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <a th:href="@{/board(boardId=${writeBoard.id})}" style="text-decoration-line: none;">
+                            <h2 class="content mt-5 mb-5 display-6 fw-bold" th:text="${writeBoard.content}" >For sale: tow shose, never used.</h2>
+                        </a>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <small th:text="${writeBoard.member.name}" >By. Unknown</small>
+                            </li>
+                            <div>
+                                <li class="d-flex align-items-center mx-2" th:with="key=${writeBoard.id}">
+                                    <i th:id="'iconOrderedByL_' + ${writeBoard.id}"
+                                       th:class="${myLikeBoardId.get(key) == 1} ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"
+                                       th:name="${writeBoard.id}"
+                                       th:text="${writeBoard.likeCount}"
+                                       style="color: red;">10</i>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
