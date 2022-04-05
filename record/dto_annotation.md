@@ -21,4 +21,5 @@ dto는 웹 서비스의 클라이언트와 서버, 더 자세히는 클라이언
 
 #### 6단어 제한 어노테이션 개발
 
+![image](https://user-images.githubusercontent.com/100845256/161750306-a032916b-c54f-46ff-a1a1-d61b763a5350.png)
 
