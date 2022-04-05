@@ -5,6 +5,8 @@
 
 --->결론: DB접근과 관련된 문제가 발생하면 repository부분을 확인하고 , 비즈니스 로직과 관련된 부분에 문제가 발생했을 때는 service패키지를 확인하면 된다.
 
+![image](https://user-images.githubusercontent.com/100845256/161748153-7dabdf85-a382-40bb-bd6a-eb0d4c909968.png)
+
 --------------------------------------------
 ### repository 개발(JPQL 쿼리문)
 
