@@ -41,5 +41,33 @@ Likes테이블 대한 Repository
 --------------------------------------------------------------------------
 ### Service 개발
 
+Service 패키지에서는
+1.@Service이라는 어노테이션을 붙혀준다. 이 어노테이션은 내부에서 자바로직을 처리해주는 거라고 이해하면 된다.
+2.@Transaction이라는 어노테이션을 붙혀준다.이 어노테이션은 데이터베이스의 상태를 변경하는 작업 또는 한번에 수행되어야 하는 연산(비즈니스 로직)들을 의미한다.
+begin, commit 을 자동으로 수행해주며 , 예외 발생 시 rollback 처리를 자동으로 수행해준다.
 
+1.MemberService
+   * 회원(이름 중복) 가입 - 회원이름이 중복되는 경우는 가입 불가 (@Transactional) id를 저장하는 작업이있기때문.
+   * 특정 id로 가입 member가 있으면 - 예외처리(DuplicatedEx)
 
+2.BoardService
+   * 글 작성 및 수정 (@Transactional) boardJpaRepository.save(board);
+   * member id로 글 조회 - 내가 쓴 글 찾기 return boardJpaRepository.findByBoardId(boardId);
+   * board id로 글 조회 - return boardJpaRepository.findByBoardId(boardId);
+   * 작성자 이름으로 글 조회 - return boardJpaRepository.findByName(name);
+   * 키워드로 글 조회 - return boardJpaRepository.findByKeyword(keyword);
+   * 좋아요 높은 순으로 조회 - return boardJpaRepository.findByLikesCnt(startIndex, pageSize);
+   * 최신순 조회 - return boardJpaRepository.findByLatestDate(startIndex, pageSize);
+   * 글 삭제 - (@Transactional)boardJpaRepository.delete(id);
+   * 내가 좋아요 누른 글 조회 - return boardJpaRepository.findLikesBoard(memberId);
+   * (board) 전체 조회 - return boardJpaRepository.findAll();
+   * (board) 개수 조회 - return boardJpaRepository.findAllCnt();
+
+3.LikesService
+   *  좋아요 등록(좋아요는 한 게시물 당 한번만) -> 회원id,게시글id를 받아와서 해당 member가 해당 게시글에 좋아요 누른적있는지 확인 후에 안눌렀으면 좋아요등록(addLikeCount()) 눌렀으면 IllegalStateException 예외처리.
+   *  해당 게시글 좋아요 -1,좋아요 취소 -> 글(회원,게시글id) 찾아서 좋아요취소(회원,게시글id,findBoard) (minusLikeCount()) 
+   *  보드 아이디가 키,좋아요 눌려졌는지 안눌러졌는지 값 가져오기
+
+4.LoginService 라는 로직서비스클래스 하나 만듦
+   *  로그인 할 때 아이디쳤는데 loginId없으면 예외처리 / 비번쳣는데 일치하면 member반환,없으면 예외처리
+   
