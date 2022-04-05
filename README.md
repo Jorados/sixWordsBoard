@@ -35,6 +35,12 @@
 * [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
 * [5주차~6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [7주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
+* [8주차 / JPA 공부]()
+* [9주차 / 스프링 웹MVC 공부]()
+* [10주차 / 스프링 시큐리티 공부]()
+* [11주차 / 스프링 시큐리티를 이용한 JWT토큰방식 로그인 및 토큰방식 소셜로그인 구현]()
+* [12주차 / 회원가입 시 이메일 인증 기능 구현]()
+* [13주차 ~ 마지막 주차 / 나머지 기능 개발 및 AWS 배포]() 
 
 ---------
 ### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
