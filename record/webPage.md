@@ -1,7 +1,7 @@
 #### 페이지 개발
 ------------------------------
 
-##### 순수 HTML에 THYMELEAF문법을 사용해서 코딩
+##### 순수 HTML에 THYMELEAF문법을 사용해서 코딩 -> css 부트스트랩 사용해서 꾸밀예정
 
 ![image](https://user-images.githubusercontent.com/100845256/161985952-7410f723-4fca-4aba-b79d-0e2b463fc0fc.png)
 
