@@ -37,7 +37,7 @@
 * [5주차 / 테스트 코드 작성](https://github.com/Jorados/sixWordsBoard/blob/main/record/test.md)
 * [6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [7주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
-* [8주차 / JPA 공부]()
+* [8주차 / JPA 공부](x)
 * [9주차 / 스프링 웹MVC 공부]()
 * [10주차 / 스프링 시큐리티 공부]()
 * [11주차 / 스프링 시큐리티를 이용한 JWT토큰방식 로그인]()
