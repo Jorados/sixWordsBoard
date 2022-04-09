@@ -13,6 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+//@Runwith를 사용하는 이유 그냥 @SpringBootTest를 사용하면 application context를 전부 로딩해서 자칫 잘못하면 무거운 프로젝트가될수있다.
+//하지만 @Runwith(SprintRunner.class)를 사용하면  @Autowired,@Bean에 해당되는것들에만 application context를 로딩하게 되므로 사용한다.
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
@@ -45,7 +49,7 @@ public class MemberServiceTest {
     public void 조회(){
         
         //given
-        Member member = getMember("test3","test3","test3",Role.ADMIN); //관리자 권한으로 맴버생성
+        Member member = getMember("test3","test3","test3",Role.ADMIN);
         //when
         Long findMemberId = memberService.join(member);  //가입해주고
         //then

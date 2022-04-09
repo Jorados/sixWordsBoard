@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+@Service //내부에서 자바로직을 처리함
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 @Slf4j
@@ -31,6 +31,7 @@ public class MemberService {
     }
 
 
+    //id겹치면 예외 터지게
     private void UniqueLoginId(String id) {
         Member findMember = memberJpaRepository.findByLoginId(id);
 

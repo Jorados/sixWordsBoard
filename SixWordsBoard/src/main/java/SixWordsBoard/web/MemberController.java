@@ -33,7 +33,7 @@ public class MemberController {
     private final BoardService boardService;
     private final LikesService likesService;
 
-    @ExceptionHandler(DuplicatedIdEx.class) //예외처리핸들러
+    @ExceptionHandler(DuplicatedIdEx.class) //예외처리핸들러 //컨트롤러 내에서 발생하는 예외를 잡아서 하나의 메서드에서 처리해주는 기능을 한다.
     public String HandlerException(Exception ex, HttpServletRequest request, Model model){
 
         model.addAttribute("exMessage",ex.getMessage());

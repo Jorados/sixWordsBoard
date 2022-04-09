@@ -68,6 +68,40 @@
             </div>
         </div>
     </div>
+  <!-- 페이징부분-->
+    <nav aria-label="Page navigation example">
+        <ul class ="pagination justify-content-center mt-5 mb-5">
+
+            <!-- "<" 모양 -->
+            <li class="page-item">
+                <a class="page-link mx-5" th:href="@{/(page=${pagination.prevBlock})}" aria-label="Previous" style="border-radius: 100px;">
+                    <span aria-hidden="true">&lt</span>
+                </a>
+            </li>
+
+            <!-- 블럭 -->
+            <th:block th:with="start = ${pagination.startPage}, end = ${pagination.endPage}">
+                <li class="page-item"
+                    th:with="start = ${pagination.startPage}, end = ${pagination.endPage}"
+                    th:each="pageButton : ${#numbers.sequence(start, end)}">
+                    <a class="page-link mx-2" th:href="@{/(page = ${pageButton})}" th:text="${pageButton}" style="border-radius: 100px;"></a>
+                </li>
+            </th:block>
+
+            <!-- ">" 모양 -->
+            <li class="page-item">
+                <a class="page-link mx-5" th:href="@{/(page=${pagination.nextBlock})}" aria-label="Next" style="border-radius: 100px;">
+                    <span aria-hidden="true">&gt</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+
+
+
 
     <div th:replace="fragments/login_footer :: login_footer" />
 </div>

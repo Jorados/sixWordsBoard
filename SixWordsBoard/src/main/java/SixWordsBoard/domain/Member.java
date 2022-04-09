@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)  //테이블의 주키역할을 한다. 객체필드를 통해 직접접근 가능
     @Column(name = "member_id")
     private Long id;
 
