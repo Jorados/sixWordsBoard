@@ -18,23 +18,27 @@
 
 <!--게시글 -->
 <div class="container">
-        <div th:object="${board}">
-            <h2 th:text="*{content}" >Short title, long jacket</h2>
-                    <ul>
-                        <li>
+    <div class="row-4 align-items-stretch py-5 ">
+        <div th:object="${board}" class="col-4" style="margin: 0 auto; float: none;">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" id="card">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 th:text="*{content}" class="content mt-5 mb-5 display-6 fw-bold" >Short title, long jacket</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
                             <small th:text="*{member.name}">작성자</small>
                         </li>
                         <div>
-                            <li th:with="key=${board.id}">
-                                <i th:id="'iconOrderedByD_' + ${board.id}"
-                                   th:class="${myLikeBoardId.get(key) == 1} ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"
-                                   th:name="${board.id}"
-                                   th:text="${board.likeCount}"
-                                   style="color: red;">10</i>
+                            <li class="d-flex align-items-center mx-2">
+                                <i class="fa-regular fa-heart" th:name="${board.id}"
+                                   th:text="${board.likeCount}" style="color: red;">10</i>
                             </li>
                         </div>
                     </ul>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
 
 
 
