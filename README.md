@@ -11,17 +11,18 @@
    + 개발기간 : 2022-03-19 ~ ing
    + 사용언어 : JAVA 11(백) / html(thymeleaf),부트스트랩(프론트)
    + 개발환경 : SpringBoot 2.6.4 / jpa / Mysql(관계형데이터베이스RDBMS)
+   + MYSQL(RDBMS) 사용이유 : 앱 또는 웹이 커지고 데이터 필드와 데이터 테이블이 많아 질수록 종속성(프로그램의 구조가 데이터의 구조에 영향을 받는 것) 유지가 가능하고 백엔드 컨트롤이 가능하다. 큰 회사,서비스에서 RDBMS DB를 사용하는데엔 다 이유가 있다.
 
 3. 구현기능
-   + 기본적인 게시글 crud(생성,조회,수정,삭제)기능
-   + (핵심)스프링 시큐리티를 이용한 JWT토큰방식의 로그인,회원가입 및 소셜로그인(카카오톡,구글)
+   + (핵심)기본적인 게시글 crud(생성,조회,수정,삭제)기능
+   + (핵심)스프링 시큐리티를 이용한 JWT토큰방식의 로그인,회원가입
    + (핵심)설계한 도메인과 SpringBoot,JPA를 기반으로 한 기본적인 crud restful api를 직접 만들기
    + import(아임포트) api를 이용한 가상간편 결제 시스템(카카오페이,페이코) --> 게시물 좋아요 할때마다?
    + websoket을 활용한 게시물 좋아요 달리면 알림기능
    + 구글 smtp를 이용하여 회원가입 시 이메일 인증 기능 구현을 통한 회원가입 
  
 4. 서버환경
-   + AWS EC2(가상서버) + Ubuntu(LINUX의 버전) 에 배포
+   + (핵심)AWS EC2(가상서버) + Ubuntu(LINUX의 버전) 서비스에 배포
 
 
 5. 개발방향
@@ -32,9 +33,16 @@
 ### ⭐ 부분 개발 정리
 * [1주차~2주차 / 환경설정 및 엔티티설계](https://github.com/Jorados/sixWordsBoard/blob/main/record/fisrt.md)
 * [3주차 / 레포지토리 및 서비스개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
-* [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/repository_service.md)
-* [5주차~6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
+* [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/dto_annotation.md)
+* [5주차 / 테스트 코드 작성](https://github.com/Jorados/sixWordsBoard/blob/main/record/test.md)
+* [6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [7주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
+* [8주차 / JPA 공부](x)
+* [9주차 / 스프링 웹MVC 공부]()
+* [10주차 / 스프링 시큐리티 공부]()
+* [11주차 / 스프링 시큐리티를 이용한 JWT토큰방식 로그인]()
+* [12주차 / 회원가입 시 이메일 인증 기능 구현]()
+* [13주차 ~ 마지막 주차 / 나머지 기능 개발 및 AWS 배포]() 
 
 ---------
 ### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
