@@ -31,5 +31,5 @@
 ![image](https://user-images.githubusercontent.com/100845256/161992253-6c206aa2-3175-461e-b090-5457d15c2e32.png)      
 
 2022-04-09
-페이징 처리부분 해결.
+페이징 처리부분 해결.      
 boardId의 memberId가 아닌 다른memberId가 게시물을 수정이나 삭제를 하려고하면 에러 메세지 뜨게함.
