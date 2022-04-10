@@ -33,7 +33,7 @@ public class LoginController {
         log.info("exMessage",ex.getMessage());
         log.info("redirectURI",ex.getMessage());
 
-        return "error/DuplicatedIdEx - redirect";
+        return "error/DuplicatedIdEx-redirect";
     }
 
     @GetMapping("/member/login")
