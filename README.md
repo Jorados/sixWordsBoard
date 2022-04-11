@@ -40,7 +40,7 @@
 * [8주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [9주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [10주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현1]()
-* [11주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현2]()
+* [11주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현2 + 소셜로그인]()
 * [12주차 / 회원가입 시 이메일 인증 기능 구현]()
 * [13주차 ~ 마지막 주차 / 나머지 기능 개발 및 (핵심4)AWS 서비스 배포]() 
 
