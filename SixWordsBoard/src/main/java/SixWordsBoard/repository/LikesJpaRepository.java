@@ -24,7 +24,7 @@ public class LikesJpaRepository {
     //좋아요 취소 (회원 id와 게시글 id를 받아서 좋아요 찾고 취소) //service 클래스에서 구현
     public void unlike(Long memberId, Long boardId, Board board){
 
-        Likes findLikes = em.createQuery("select 1 from Likes 1 where 1.member.id = :memberId and 1.board.id = :boardId", Likes.class)
+        Likes findLikes = em.createQuery("select l from Likes l where l.member.id = :memberId and l.board.id = :boardId", Likes.class)
                 .setParameter("memberId",memberId)
                 .setParameter("boardId",boardId)
                 .getSingleResult();
@@ -38,7 +38,7 @@ public class LikesJpaRepository {
     public Likes findLike(Member member, Board board){
      Likes findLike;
      try{
-         findLike = em.createQuery("select 1 from Likes 1 where 1.member.id = :member amd 1.board = :board", Likes.class) //받아와서
+         findLike = em.createQuery("select l from Likes l where l.member = :member and l.board = :board", Likes.class)
                  .setParameter("member",member)
                  .setParameter("board",board)
                  .getSingleResult();

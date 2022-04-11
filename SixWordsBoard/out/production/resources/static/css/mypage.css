@@ -9,6 +9,7 @@
     line-height: 45px!important;
 }
 
+
 .text-white {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
@@ -20,6 +21,7 @@
 }
 
 .card {
+
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 1.5rem;
@@ -36,6 +38,7 @@ h2 {
     font-weight: bold;
 
 }
+
 
 small{
     color: black;
