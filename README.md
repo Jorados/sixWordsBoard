@@ -36,7 +36,7 @@
 * [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/dto_annotation.md)
 * [5주차 / 테스트 코드 작성](https://github.com/Jorados/sixWordsBoard/blob/main/record/test.md)
 * [6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
-* [7주차 / (핵심1)웹 페이지(프론트) 개발 -> 게시판 개발 끝](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
+* [7주차 / 웹 페이지(프론트) 개발 -> (핵심1)게시판 개발 끝](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [8주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [9주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [10주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현1]()
