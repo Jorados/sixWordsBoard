@@ -4,17 +4,6 @@
 ##### 순수 HTML에 THYMELEAF문법을 사용해서 코딩 -> css 부트스트랩 사용해서 꾸밀예정
 
 ![image](https://user-images.githubusercontent.com/100845256/161985952-7410f723-4fca-4aba-b79d-0e2b463fc0fc.png)
-
-바디헤더 ![image](https://user-images.githubusercontent.com/100845256/161986979-e0189020-759f-4f49-a933-c5251b565bd1.png)      
-글쓰러가기 버튼 ![image](https://user-images.githubusercontent.com/100845256/161987028-0e351dbb-4a1a-4bf6-b236-cc2f1682d8a5.png)         
-게시물 페이징 부분  
-![image](https://user-images.githubusercontent.com/100845256/161987087-5fbe54af-ee09-4d08-b047-9884546c2538.png)
-![image](https://user-images.githubusercontent.com/100845256/161987255-845517c0-be14-4546-a44e-40ed067d812b.png)
-![image](https://user-images.githubusercontent.com/100845256/161987285-bbf77f78-7816-45f3-9478-8164bb702167.png)                
-  
-푸터 ![image](https://user-images.githubusercontent.com/100845256/161987312-edb8cb80-5319-4753-9cb3-7a699392f546.png)
-
-
 ![image](https://user-images.githubusercontent.com/100845256/161988152-f42d7e7b-5e99-4372-b3e4-85488383f023.png)      
 ![image](https://user-images.githubusercontent.com/100845256/161988311-667524ec-685c-4f7b-aaab-b6e2641197c2.png)       
 ![image](https://user-images.githubusercontent.com/100845256/161988403-6aa7c008-4a74-4737-a68c-8e883a6526c0.png)        
@@ -30,6 +19,14 @@
 ![image](https://user-images.githubusercontent.com/100845256/161992198-d5401d92-813b-4c71-b20d-95127747b3d5.png)       
 ![image](https://user-images.githubusercontent.com/100845256/161992253-6c206aa2-3175-461e-b090-5457d15c2e32.png)      
 
-2022-04-09
-페이징 처리부분 해결.      
+2022-04-09      
+페이징 처리부분 해결.       
 boardId의 memberId가 아닌 다른memberId가 게시물을 수정이나 삭제를 하려고하면 에러 메세지 뜨게함.
+
+2022-04-11              
+![image](https://user-images.githubusercontent.com/100845256/162739336-8c9a04a7-4961-4af9-83d8-1db078946733.png)           
+![image](https://user-images.githubusercontent.com/100845256/162739379-dcfcc869-e872-4f05-9eb7-adbca2e94986.png)    
+
+최종 디자인 (부트스트랩/css 적용 및 thymeleaf와 jquery이용한 좋아요 기능 구현     
+![image](https://user-images.githubusercontent.com/100845256/162739817-7b88bcf5-4cf3-4189-b629-49f096ce78ab.png)         
+
