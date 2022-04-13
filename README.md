@@ -3,7 +3,7 @@
 
 1. 프로젝트
     + 스프링부트와 jpa를 활용한 웹 애플리케이션 게시판(헤밍웨이가 6단어만으로 쓴 소설처럼 6단어로만 쓸 수 있는 게시판)
-    + [참고 사이트](http://www.sixwordswriter.cf/)
+    + [참고 사이트](http://www.sixwordswriter.cf/)    
 
 2. 개요
    + 명칭 : sixWordBoard
