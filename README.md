@@ -21,7 +21,7 @@
    + 회원가입 시 이메일 인증 기능 구현을 통한 회원가입 
  
 4. 서버환경
-   + (핵심)AWS EC2(가상서버) + Ubuntu(LINUX의 버전) 서비스에 배포 
+   + heroku 무료 클라우드 서버 서비스에 DB(MYSQL)연동 후 배포 
 
 
 5. 개발방향
@@ -35,13 +35,13 @@
 * [4주차 / 엔티티 데이터전송을 위한 dto개발 및 6글자 제한을 두는 어노테이션 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/dto_annotation.md)
 * [5주차 / 테스트 코드 작성](https://github.com/Jorados/sixWordsBoard/blob/main/record/test.md)
 * [6주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
-* [7주차 / 웹 페이지(프론트) 개발 -> (핵심1)게시판 개발 끝](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
+* [7주차 / 웹 페이지(프론트) 개발 + 서버 배포 -> (핵심1)게시판 개발 끝 / 서버 배포](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [8주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [9주차 / (핵심2)게시판 crud restful api개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/restfulApi.md)
 * [10주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현1](https://github.com/Jorados/sixWordsBoard/tree/main/record)
 * [11주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현2 + 소셜로그인(Oauth)](https://github.com/Jorados/sixWordsBoard/tree/main/record)
 * [12주차 / 회원가입 시 이메일 인증 기능 구현]()
-* [13주차 ~ 마지막 주차 / 나머지 기능 개발 및 (핵심4)AWS 서비스 배포]() 
+* [13주차 ~ 마지막 주차 / 나머지 기능 개발 ]() 
 
 ---------
 ### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
