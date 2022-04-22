@@ -1,6 +1,6 @@
 ### :clipboard: sixWordBoard 
 ---
-
+    
 1. 프로젝트    
     + 스프링부트와 jpa를 활용한 웹 애플리케이션 게시판(헤밍웨이가 6단어만으로 쓴 소설처럼 6단어로만 쓸 수 있는 게시판)
     + [배포 사이트(pc환경에서 접속 바람)](https://sixwordsboard2.herokuapp.com/)    
