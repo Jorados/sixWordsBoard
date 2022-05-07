@@ -43,7 +43,7 @@
 
 ---------
 ### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
-JPA 공부
+JPA 
 * [JPA 영속성 컨텍스트](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/Persist.md)
 * [엔티티 매핑](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/EntityMapping.md)
 * [연관관계 매핑 기초 / 다양한 연관관계 매핑]()
@@ -52,8 +52,6 @@ JPA 공부
 * [객체지향 쿼리 문법]()
   
 SPRING MVC
-* [서블릿]()
-* [서블릿,JSP,MVC 패턴]()
 * [MVC프레임워크 스프링 MVC-구조이해]()
 * [스프링 MVC-기본기능]()
 * [간단한 페이지 처리]()
@@ -69,4 +67,7 @@ SPRING MVC
 * [파일업로드]() 
 
 SPRING SECURITY
-* [이론]()
+* [기본이론]()
+* [스프링 시큐리티 OAuth2.0]()
+* [스프링 시큐리티 웹 보안 이해]()
+* [스프링 시큐리티 JWT 서버구축(토큰)]()
