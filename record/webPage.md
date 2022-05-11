@@ -9,6 +9,9 @@ boardId의 memberId가 아닌 다른memberId가 게시물을 수정이나 삭제
 ![image](https://user-images.githubusercontent.com/100845256/167848108-b97d622f-8dbc-495c-a152-a8502ed0e6d9.png)       
 자바 스크립트를 이용해 윈도우 에러창 뜨게 함    
 ![image](https://user-images.githubusercontent.com/100845256/167848177-b1942914-5115-413c-b47c-15ee3d669d2e.png)         
+![image](https://user-images.githubusercontent.com/100845256/167849729-743eb631-d0ae-4e6a-9e2e-c06013e01a31.png)     
+![image](https://user-images.githubusercontent.com/100845256/167849794-1944c93b-6d3f-4755-97d9-17b0cf70ba75.png)     
+
              
 웹페이지 구성요소                
 ![image](https://user-images.githubusercontent.com/100845256/162739336-8c9a04a7-4961-4af9-83d8-1db078946733.png)                
