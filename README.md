@@ -34,7 +34,7 @@
 * [5주차 / 테스트 코드 작성](https://github.com/Jorados/sixWordsBoard/blob/main/record/test.md)
 * [6-7주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [8-9주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
-* [10주차 / 웹 서버 배포 ]()
+* [10주차 / 웹 서버 배포 ](https://github.com/Jorados/sixWordsBoard/blob/main/record/server.md)
 * [11주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현1 및 공부](https://github.com/Jorados/sixWordsBoard/tree/main/record)
 * [12주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현2 + 소셜로그인(Oauth) 및 공부](https://github.com/Jorados/sixWordsBoard/tree/main/record)
 * [13주차 / 회원가입 시 이메일 인증 기능 구현]()
