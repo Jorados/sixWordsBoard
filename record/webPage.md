@@ -28,5 +28,6 @@ boardId의 memberId가 아닌 다른memberId가 게시물을 수정이나 삭제
 ![image](https://user-images.githubusercontent.com/100845256/162739379-dcfcc869-e872-4f05-9eb7-adbca2e94986.png)    
 
 최종 디자인 (부트스트랩/css 적용 및 thymeleaf와 jquery이용한 좋아요 기능 구현     
-![image](https://user-images.githubusercontent.com/100845256/162739817-7b88bcf5-4cf3-4189-b629-49f096ce78ab.png)         
+![image](https://user-images.githubusercontent.com/100845256/167846698-2658ae0e-f946-405c-9f9f-cc24a9259e98.png)
+        
 
