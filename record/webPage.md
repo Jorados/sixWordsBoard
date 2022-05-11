@@ -29,7 +29,7 @@ jQuery 이벤트 메서드 중 하나.
 로그인 체크 실행 창         
 ![image](https://user-images.githubusercontent.com/100845256/167849794-1944c93b-6d3f-4755-97d9-17b0cf70ba75.png)   
      
-좋아요 기능 구현(ajax)
+좋아요 기능 구현(ajax :  Ajax (Asynchronous JavaScript and XML)·자바스크립트를 이용해서 비동기식으로 XML을 이용하여 서버와 통신하는 방식)       
 ![image](https://user-images.githubusercontent.com/100845256/167865767-bd1841c8-4ec3-4c19-9411-c15c436b0162.png)      
 좋이요 기능 컨트롤러     
 ![image](https://user-images.githubusercontent.com/100845256/167866491-3c69a04d-efd5-468a-92c4-4fa9bf2f734c.png)      
