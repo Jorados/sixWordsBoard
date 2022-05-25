@@ -45,7 +45,7 @@
 JPA 
 * [JPA 영속성 컨텍스트](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/Persist.md)
 * [엔티티 매핑](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/EntityMapping.md)
-* [연관관계 매핑 기초 / 다양한 연관관계 매핑]()
+* [연관관계 매핑 기초 / 다양한 연관관계 매핑](https://github.com/Jorados/sixWordsBoard/blob/main/JpaRecord/association.md)
 * [프록시와 연관관계 관리]()
 * [값 타입]()
 * [객체지향 쿼리 문법]()
