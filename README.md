@@ -36,7 +36,7 @@
 * [8-9주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [10주차 / 웹 서버 배포 ](https://github.com/Jorados/sixWordsBoard/blob/main/record/server.md)
 * [11주차 / (핵심3)스프링 MVC 공부]()
-* [12주차 / (핵심3)스프링 JPA 공부]()
+* [12-13주차 / (핵심3)스프링 JPA 공부]()
 * [14주차 ~ 마지막 주차 / 정리]() 
 
 ---------
