@@ -14,9 +14,9 @@
 
 3. 구현기능
    + (핵심)기본적인 게시글 crud(생성,조회,수정,삭제)기능
-   + (핵심)스프링 시큐리티를 이용한 JWT토큰방식의 로그인,회원가입 +Oauth(소셜 로그인)
-   + (핵심)설계한 도메인과 SpringBoot,JPA를 기반으로 한 기본적인 crud restful api를 직접 만들기(POSTMAN api개발 툴 사용)
-   + 회원가입 시 이메일 인증 기능 구현을 통한 회원가입 
+   + (핵심)설계한 도메인과 SpringBoot,JPA를 기반으로 한 기본적인 crud rest api
+   + 헤밍웨이 게시판 컨셉에 맞는 6단어 제한
+
  
 4. 서버환경
    + heroku 무료 클라우드 서버 서비스에 DB(MYSQL)연동 후 배포 
@@ -24,7 +24,7 @@
 
 5. 개발방향
    + 게시판과 기능들을 먼저 구현하고 서버환경을 설정하는 방향으로 진행하겠습니다.
-   + 엔티티개발(domain) -> repository개발(기능) -> service개발(기능구현) -> webController개발 -> 프론트개발 -> 기본 게시판 개발 -> 배포 ->  추가 기능 개발
+   + 엔티티개발(domain/데이터아키텍쳐) -> repository개발(DB접근) -> service개발(기능구현) -> webController개발(MVC) -> 프론트개발 -> 기본 게시판 개발 -> 서버 배포   
 
 ----------
 ### ⭐ 부분 개발 정리
@@ -35,10 +35,9 @@
 * [6-7주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [8-9주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [10주차 / 웹 서버 배포 ](https://github.com/Jorados/sixWordsBoard/blob/main/record/server.md)
-* [11주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현1 및 공부](https://github.com/Jorados/sixWordsBoard/tree/main/record)
-* [12주차 / (핵심3)스프링 시큐리티를 이용한 토큰방식 로그인구현2 + 소셜로그인(Oauth) 및 공부](https://github.com/Jorados/sixWordsBoard/tree/main/record)
-* [13주차 / 회원가입 시 이메일 인증 기능 구현]()
-* [14주차 ~ 마지막 주차 / 마무리 ]() 
+* [11주차 / (핵심3)스프링 MVC 공부]()
+* [12주차 / (핵심3)스프링 JPA 공부]()
+* [14주차 ~ 마지막 주차 / 정리]() 
 
 ---------
 ### ⭐ 스프링 기술공부(스프링 시큐리티,스프링 웹 MVC,JPA 이론)
