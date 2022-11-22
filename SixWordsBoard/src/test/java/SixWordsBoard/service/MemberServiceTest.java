@@ -3,7 +3,7 @@ package SixWordsBoard.service;
 
 import SixWordsBoard.DuplicatedIdEx;
 import SixWordsBoard.domain.Member;
-import SixWordsBoard.domain.Role;
+import SixWordsBoard.domain.element.Role;
 import SixWordsBoard.repository.MemberJpaRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;

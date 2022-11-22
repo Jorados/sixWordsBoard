@@ -1,4 +1,4 @@
-package SixWordsBoard.domain;
+package SixWordsBoard.domain.element;
 
 
 import lombok.Getter;

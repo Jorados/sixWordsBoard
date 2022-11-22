@@ -1,10 +1,10 @@
 package SixWordsBoard.domain;
 
+import SixWordsBoard.domain.element.Role;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity @Getter
 @Setter

@@ -2,7 +2,7 @@ package SixWordsBoard.web;
 
 import SixWordsBoard.domain.Board;
 import SixWordsBoard.domain.Member;
-import SixWordsBoard.domain.Pagination;
+import SixWordsBoard.domain.element.Pagination;
 import SixWordsBoard.service.BoardService;
 import SixWordsBoard.service.LikesService;
 import lombok.RequiredArgsConstructor;
@@ -11,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

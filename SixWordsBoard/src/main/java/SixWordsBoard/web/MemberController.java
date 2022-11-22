@@ -5,7 +5,7 @@ import SixWordsBoard.DuplicatedIdEx;
 import SixWordsBoard.SessionConst;
 import SixWordsBoard.domain.Board;
 import SixWordsBoard.domain.Member;
-import SixWordsBoard.domain.Role;
+import SixWordsBoard.domain.element.Role;
 import SixWordsBoard.dto.MemberDto;
 import SixWordsBoard.service.BoardService;
 import SixWordsBoard.service.LikesService;

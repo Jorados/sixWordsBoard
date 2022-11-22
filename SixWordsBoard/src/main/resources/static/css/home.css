@@ -3,6 +3,14 @@
     background-position: 85% 15%;
     background-color: white!important;
 }
+.p-4 {
+    position: relative;
+    left: 270px;
+}
+
+img {
+    margin-right: 45%;
+}
 
 .content {
     line-height: 45px!important;
