@@ -57,17 +57,19 @@
     </ul>
 </header>
 <!--점보토론-->
-<div class="p-5 bg-light rounded-3">
-    <div class="container-fluid py-5 px-5">
-        <h1 class="display-5 fw-bold">무엇을 쓰든 상관없다!</h1>
-        <h1 class="display-5 fw-bold">6단어를 활용한 게시판 소설</h1>
-        <p class="col-md-8 fs-5">"For sale : Baby shoes. Never worn." 헤밍웨이가 6단어로만 쓴 소설.<br> 당신도 헤밍웨이처럼 멋진 6단어를 써봐!</p>
-        <button th:onclick="'location.href=' + '\'' + @{/board/new} + '\''" class="btn btn-secondary" type="button">글 쓰러 가기</button>
-    </div>
-</div>
-</div>
-    <!-- 탭 내용--> <!--좋아요순-->
 <div class="container">
+    <div class="container">
+        <div class="p-5 p-4 bg-light rounded-3">
+            <div>
+                <img class="note" src="https://user-images.githubusercontent.com/100845256/163787945-09f792d2-d45a-4487-b023-f7eb80228097.png" height="250" width="250" align="right">
+                <h1 class="display-5 fw-bold">무엇을 쓰든 상관없다!</h1>
+                <h1 class="display-5 fw-bold">6단어를 활용한 게시판 소설</h1>
+                <p class="col-md-8 fs-5">"For sale : Baby shoes. Never worn." 헤밍웨이가 6단어로만 쓴 소설.<br> 당신도 헤밍웨이처럼 멋진 6단어를 써봐!</p>
+                <button th:onclick="'location.href=' + '\'' + @{/board/new} + '\''" class="btn btn-secondary" type="button">글 쓰러 가기</button>
+            </div>
+        </div>
+
+    <!-- 탭 내용--> <!--좋아요순-->
     <ul class="nav nav-tabs mt-5 mb-4" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link fw-bold active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">좋아요 높은 순</button>
