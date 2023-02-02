@@ -34,4 +34,8 @@
 * [8~9주차 / 웹 컨트롤러(스프링 웹mvc) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webController.md)
 * [10~11주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [12~13주차 / 웹 서버 배포 ](https://github.com/Jorados/sixWordsBoard/blob/main/record/server.md)
-* [14주차 ~ 마지막 주차 / 결과](https://sixwordsboard2.herokuapp.com/)
+* [14주차 ~ 마지막 주차 / 결과](https://sixwordsboard2.herokuapp.com/)    
+
+--------
+### 💥메인화면   
+![image](https://user-images.githubusercontent.com/100845256/216206336-79ce294a-5378-447f-94a1-7f6da69fb836.png)
