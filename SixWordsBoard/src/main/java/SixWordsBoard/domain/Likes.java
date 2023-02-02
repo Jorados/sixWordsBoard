@@ -26,13 +26,10 @@ public class Likes {
 
     // 생성메서드
     public static Likes createLike(Member member, Board board){
-
         Likes likes = new Likes();
         likes.setMember(member);
-
         //연관관계 추가
         likes.setBoard(board);
-
         return likes;
     }
 

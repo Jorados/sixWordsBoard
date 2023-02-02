@@ -72,7 +72,6 @@ public class BoardController {
         redirectAttributes.addAttribute("boardId", board.getId()); //url에 노출시키지않고 전송.?
         //POST/GET 방식으로 예약생성같은 DB 작업이 있는 페이지를 끝내고 결과페이지를 일반적으로 포워딩할경우 F5나 새로고침등으로 서버에 동일한
         // 요청을 보내어 문제가 발생할 가능성이 있어 주요 서비스에는 !!!!중복 요청이 들어가지 않도록 결과는 redirect 할수있도록 처리!!!가 필요합니다.
-        //스프링 웹 mvc 따로 공부하자 ;;
         return "redirect:/board";
     }
 
@@ -81,8 +80,8 @@ public class BoardController {
                         @SessionAttribute(name = "loginMember", required = false)Member loginMember,
                         Model model) {
 
-        Board findBoard = boardService.findByBoardId(boardId);  //boarId로 찾아서
-        model.addAttribute("board", findBoard);  //모델뷰 mvc전환
+        Board findBoard = boardService.findByBoardId(boardId);
+        model.addAttribute("board", findBoard);
 
         if (loginMember == null) {
             return "board/board";
@@ -141,9 +140,6 @@ public class BoardController {
         redirectAttributes.addAttribute("boardId",findBoard.getId());   //중복 요청 방지
         return "redirect:/board"; //고쳐서 원래 보드
     }
-
-
-
 
     @GetMapping("/board/delete")
     public String createDeleteForm(@RequestParam("boardId") Long boardId ,Model model){

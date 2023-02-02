@@ -25,7 +25,6 @@ public class Board {
     private String content;
 
     private LocalDateTime writeDate;
-
     private int likeCount;
 
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
