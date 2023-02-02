@@ -7,8 +7,8 @@
 2. 개요
    + 명칭 : sixWordBoard
    + 개발자 : 조성진
-   + 개발기간 : 2022-03-19 ~ ing.      
-   + 사용언어 : JAVA 11(백) / html(thymeleaf),부트스트랩(프론트)   
+   + 개발기간 : 2022-03-19 ~ 2022-06-20      
+   + 사용언어 : JAVA 11(백) / html(thymeleaf),부트스트랩(프론트)(SSR)  
    + 개발환경 : SpringBoot 2.6.4 / jpa / Mysql(관계형데이터베이스RDBMS)
 
 3. 구현기능
@@ -35,4 +35,3 @@
 * [10~11주차 / 웹 페이지(프론트) 개발](https://github.com/Jorados/sixWordsBoard/blob/main/record/webPage.md)
 * [12~13주차 / 웹 서버 배포 ](https://github.com/Jorados/sixWordsBoard/blob/main/record/server.md)
 * [14주차 ~ 마지막 주차 / 결과](https://sixwordsboard2.herokuapp.com/)
-* 
