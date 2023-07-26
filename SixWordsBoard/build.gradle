@@ -29,8 +29,6 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-//	testImplementation 'junit:junit:4.13.1'
-
 
 	//JUnit4 추가
 	testImplementation("org.junit.vintage:junit-vintage-engine") {
@@ -39,6 +37,6 @@ dependencies {
 
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
