@@ -1,6 +1,8 @@
 package SixWordsBoard.domain;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Getter
-@Setter
+@NoArgsConstructor
 public class Board {
 
     @Id
@@ -37,5 +39,18 @@ public class Board {
 
     public void minusLikeCount(){
         likeCount -= 1;
+    }
+
+    @Builder
+    public Board(Long id, Member member, String content, LocalDateTime writeDate, int likeCount) {
+        this.id = id;
+        this.member = member;
+        this.content = content;
+        this.writeDate = writeDate;
+        this.likeCount = likeCount;
+    }
+
+    public void contentEdit(String content){
+        this.content = content;
     }
 }

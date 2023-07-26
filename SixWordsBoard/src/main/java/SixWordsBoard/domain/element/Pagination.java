@@ -20,7 +20,7 @@ public class Pagination {
     private int prevBlock;
     private int nextBlock;
 
-    // 총 게시물 수와 현재 페이지를 Controller로부터 받아온다.
+    // 총 게시물 수와 현재 페이지를 Controller로 부터 받아온다.
     public Pagination(int totalListCnt, int page) {
 
         /** 현재 페이지 **/

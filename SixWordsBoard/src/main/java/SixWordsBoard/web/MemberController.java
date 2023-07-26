@@ -61,11 +61,12 @@ public class MemberController {
             return "member/new";
         }
 
-        Member member = new Member();
-        member.setLoginId(dto.getLoginId()); //PostMapping에 의한 Dto로 데이터 전송받은걸 set함
-        member.setPassword(dto.getPassword());
-        member.setName(dto.getName());
-        member.setRole(Role.ADMIN);
+        Member member = Member.builder()  //PostMapping에 의한 Dto로 데이터 전송받은걸 set함
+                    .loginId(dto.getLoginId())
+                    .password(dto.getPassword())
+                    .name(dto.getName())
+                    .role(Role.ADMIN)
+                    .build();
 
         memberService.join(member);      //맴버서비스 회원가입
 

@@ -62,10 +62,11 @@ public class BoardController {
             return "board/save";
         }
 
-        Board board = new Board();
-        board.setMember(loginMember);
-        board.setContent(dto.getContent());
-        board.setWriteDate(LocalDateTime.now());
+        Board board = Board.builder()
+                .member(loginMember)
+                .content(dto.getContent())
+                .writeDate(LocalDateTime.now())
+                .build();
 
         boardService.save(board);
 
@@ -133,8 +134,7 @@ public class BoardController {
         }
 
         Board findBoard = boardService.findByBoardId(boardId);
-
-        findBoard.setContent(dto.getContent());  //게시글 set
+        findBoard.contentEdit(dto.getContent());  //게시글 set
         boardService.save(findBoard);  //저장
 
         redirectAttributes.addAttribute("boardId",findBoard.getId());   //중복 요청 방지

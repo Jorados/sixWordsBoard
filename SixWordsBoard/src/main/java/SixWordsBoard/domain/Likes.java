@@ -1,13 +1,16 @@
 package SixWordsBoard.domain;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
-@Setter
+@NoArgsConstructor
 public class Likes {
 
     @Id
@@ -26,11 +29,18 @@ public class Likes {
 
     // 생성메서드
     public static Likes createLike(Member member, Board board){
-        Likes likes = new Likes();
-        likes.setMember(member);
-        //연관관계 추가
-        likes.setBoard(board);
+        Likes likes = Likes.builder()
+                .member(member)
+                .board(board)
+                .build();
+
         return likes;
     }
 
+    @Builder
+    public Likes(Long id, Member member, Board board) {
+        this.id = id;
+        this.member = member;
+        this.board = board;
+    }
 }
