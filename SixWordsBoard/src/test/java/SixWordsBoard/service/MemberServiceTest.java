@@ -17,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 //하지만 @Runwith(SprintRunner.class)를 사용하면  @Autowired,@Bean에 해당되는것들에만 application context를 로딩하게 되므로 사용한다.
 
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
 public class MemberServiceTest {
