@@ -34,11 +34,12 @@ public class MemberServiceTest {
     @Test
     public void 회원가입(){
         //given
-        Member member = new Member();
-        member.setLoginId("test2");
-        member.setPassword("test2");
-        member.setName("test2");
-        member.setRole(Role.USER);
+        Member member = Member.builder()
+                .loginId("test2")
+                .password("test2")
+                .name("test2")
+                .role(Role.USER)
+                .build();
         //when
         Long findMemberId = memberService.join(member);
         //then
@@ -59,11 +60,12 @@ public class MemberServiceTest {
     }
 
     private Member getMember(String loginId, String password, String name, Role role) {
-        Member member = new Member();
-        member.setLoginId(loginId);
-        member.setPassword(password);
-        member.setName(name);
-        member.setRole(role);
+        Member member = Member.builder()
+                .loginId(loginId)
+                .password(password)
+                .name(name)
+                .role(role)
+                .build();
         return member;
     }
 
