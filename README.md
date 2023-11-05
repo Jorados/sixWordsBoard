@@ -38,6 +38,7 @@
 
 --------
 ### 💥메인화면   
-<!-- ![image](https://user-images.githubusercontent.com/100845256/216206336-79ce294a-5378-447f-94a1-7f6da69fb836.png) -->
-![image](https://github.com/Jorados/sixWordsBoard/assets/100845256/5fcbded3-db36-46c0-bb6d-b4ef22aa531a)
+
+![image](https://user-images.githubusercontent.com/100845256/216206336-79ce294a-5378-447f-94a1-7f6da69fb836.png)   
+<!-- ![image](https://github.com/Jorados/sixWordsBoard/assets/100845256/5fcbded3-db36-46c0-bb6d-b4ef22aa531a) -->
 
