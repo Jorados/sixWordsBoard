@@ -10,7 +10,7 @@
    + 개발기간 : 2022-03-19 ~ 2022-06-20  
    + 개발환경
      + Front : Html , Css , Thymeleaf
-     + Back : Java / SpringBoot 2.6.4 / Jpa / Mysql 
+     + Back : Java , SpringBoot 2.6.4 , Jpa , Mysql 
      + Infra : Heroku -> Aws Ec2 , Aws Rds (변경)
 
 3. 구현기능
