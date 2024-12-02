@@ -34,6 +34,10 @@ public class HomeController {
         List<Board> orderedByL = boardService.findByLikesCnt(startIndex, pageSize); //좋아요높은순 담고
         List<Board> orderedByD = boardService.findByLatestDate(startIndex, pageSize); //최신순 담고
 
+        // content 길이 제한
+        resizeContent(orderedByL, 30);
+        resizeContent(orderedByD, 30);
+
         model.addAttribute("orderedByL",orderedByL);   //좋아요순으로 게시글 불러오기
         model.addAttribute("orderedByD", orderedByD);  //최신순으로 게시글 불러오기
         model.addAttribute("pagination", pagination);  //페이지네이션 모델뷰전환
@@ -47,9 +51,17 @@ public class HomeController {
         model.addAttribute("memberId",loginMember.getId());
         model.addAttribute("myLikeBoardId",myLikeBoardId);
         return "loginHome";
-
     }
 
+
+    private void resizeContent(List<Board> boards, int maxLength) {
+        for (Board board : boards) {
+            String content = board.getContent();
+            if (content != null && content.length() > maxLength) {
+                board.contentEdit(content.substring(0, maxLength) + "...");
+            }
+        }
+    }
 
 
 }

@@ -56,7 +56,7 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <!-- 좋아요순 -->
             <div class="row row-cols1 row-cols-lg-3 align-items-stretch g-4 py-5">
                 <div class="col" th:each="orderedBoard : ${orderedByL}">
-                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                    <div class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                             <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;">
                                 <h2 class="content mt-5 mb-5 display-6 fw-bold" th:text="${orderedBoard.content}" >For sale: tow shose, never used.</h2>
@@ -82,7 +82,7 @@
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <!-- 최신순 -->
         <div class="row row-cols1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col" th:each="orderedBoard : ${orderedByD}">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                <div class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                     <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                             <a th:href="@{/board(boardId=${orderedBoard.id})}" style="text-decoration-line: none;">
