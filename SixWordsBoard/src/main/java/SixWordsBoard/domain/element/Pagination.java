@@ -22,7 +22,6 @@ public class Pagination {
 
     // 총 게시물 수와 현재 페이지를 Controller로 부터 받아온다.
     public Pagination(int totalListCnt, int page) {
-
         /** 현재 페이지 **/
         setPage(page);
 
@@ -61,6 +60,5 @@ public class Pagination {
 
         /** DB 접근 시작 index **/
         setStartIndex((page-1) * pageSize);
-
     }
 }

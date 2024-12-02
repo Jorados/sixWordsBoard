@@ -24,19 +24,18 @@ public class HomeController {
 
     @GetMapping("/")
     public String Home(@SessionAttribute(name = "loginMember", required = false) Member loginMember, Model model,
-                       @RequestParam(defaultValue = "1")int page){
+                       @RequestParam(defaultValue = "1") int page){
 
         int totalListCnt = boardService.findAllCnt();
+
+        if(totalListCnt < page * 9 || page < 0) page=1;
         Pagination pagination = new Pagination(totalListCnt, page);  //총게시글수,현재페이지
+
         int startIndex = pagination.getStartIndex(); //게시글 불러오기
         int pageSize = pagination.getPageSize(); //게시판 당 띄울 게시글 수
 
         List<Board> orderedByL = boardService.findByLikesCnt(startIndex, pageSize); //좋아요높은순 담고
         List<Board> orderedByD = boardService.findByLatestDate(startIndex, pageSize); //최신순 담고
-
-        // content 길이 제한
-        resizeContent(orderedByL, 30);
-        resizeContent(orderedByD, 30);
 
         model.addAttribute("orderedByL",orderedByL);   //좋아요순으로 게시글 불러오기
         model.addAttribute("orderedByD", orderedByD);  //최신순으로 게시글 불러오기
@@ -52,17 +51,5 @@ public class HomeController {
         model.addAttribute("myLikeBoardId",myLikeBoardId);
         return "loginHome";
     }
-
-
-    private void resizeContent(List<Board> boards, int maxLength) {
-        for (Board board : boards) {
-            String content = board.getContent();
-            if (content != null && content.length() > maxLength) {
-                board.contentEdit(content.substring(0, maxLength) + "...");
-            }
-        }
-    }
-
-
 }
 
