@@ -14,6 +14,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .order(1)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/", "/member/new", "/member/afternew/{memberName}", "/member/login", "/board",
-                        "/css/**", "/*.ico", "/error");  //인터셉터를 제외할 url 패턴을 등록하는 메서드
+                        "/css/**", "/js/**", "/*.ico", "/error", "/like");  //인터셉터를 제외할 url 패턴을 등록하는 메서드
     }
 }

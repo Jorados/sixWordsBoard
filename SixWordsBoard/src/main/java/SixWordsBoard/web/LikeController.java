@@ -27,9 +27,14 @@ public class LikeController {
 
     @PostMapping("/like")
     @ResponseBody //서버응답
-    public int like(@SessionAttribute(name = "loginMember",required = false) Member loginMember,   //loginMember를 받아서
+    public Object like(@SessionAttribute(name = "loginMember",required = false) Member loginMember,   //loginMember를 받아서
                     @RequestParam("likeCheck") int likeCheck,    //요청받고
                     @RequestParam("boardId") Long boardId) {     //요청받아서
+
+        if (loginMember == null) {
+            log.info("비로그인 상태에서 좋아요 요청 발생");
+            return "로그인이 필요한 서비스입니다."; // 문자열 반환
+        }
 
         log.info("likeCheck = " + likeCheck);   //로그찍고
         log.info("boardId = " + boardId);

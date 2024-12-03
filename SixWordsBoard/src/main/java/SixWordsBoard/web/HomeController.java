@@ -42,6 +42,7 @@ public class HomeController {
         model.addAttribute("pagination", pagination);  //페이지네이션 모델뷰전환
 
         if(loginMember == null){
+            model.addAttribute("memberId", null); // 비로그인 상태
             return "Home";
         }
 
@@ -49,7 +50,7 @@ public class HomeController {
 
         model.addAttribute("memberId",loginMember.getId());
         model.addAttribute("myLikeBoardId",myLikeBoardId);
-        return "loginHome";
+        return "Home";
     }
 }
 

@@ -65,7 +65,7 @@ public class MemberController {
                     .loginId(dto.getLoginId())
                     .password(dto.getPassword())
                     .name(dto.getName())
-                    .role(Role.ADMIN)
+                    .role(Role.USER)
                     .build();
 
         memberService.join(member);      //맴버서비스 회원가입
